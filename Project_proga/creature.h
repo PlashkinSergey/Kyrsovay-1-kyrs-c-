@@ -5,7 +5,7 @@ class Creature
 {
 public:
 	inline float getCordsY() { return y;}
-	float getCordsX() { return x; }
+	inline float getCordsX() { return x; }
 	Creature(float, float, float, float);
 	virtual sf::Sprite getSprite() = 0;
 	virtual void control(float) = 0;

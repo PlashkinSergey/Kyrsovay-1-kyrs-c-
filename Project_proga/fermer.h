@@ -27,10 +27,7 @@ private:
 	std::vector<Sheep*> sheep;
 	std::vector<Carrot*> carrot;
 	int radius;
-	enum direction 
-	{ 
-		up, left, down, right 
-	} stat;
+	enum direction { up, left, down, right } stat;
 protected:
 	void update(float) override;
 };

@@ -19,7 +19,7 @@ private:
 	std::vector<std::pair<std::vector<int>, int>> clicked;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 protected:
-	int title[HEIGHT_MAP*WIDHT_MAP];
+	int title[HEIGHT_MAP * WIDHT_MAP];
 	sf::VertexArray m_vertices;
 	sf::Texture m_tileset;
 };
