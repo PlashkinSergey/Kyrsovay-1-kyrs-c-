@@ -1,5 +1,4 @@
 #include "sheep.h"
-using namespace sf;
 
 Sheep::Sheep():Creature(0, 0, 0, 0), dir(0)
 {}
@@ -86,7 +85,7 @@ void Sheep::setDir(int d)
 
 void Sheep::interectionMap()
 {
-	if (!IntRect(2 * 89, 2 * 89, 89 * 16, 89 * 16).contains(sprite.getGlobalBounds().left, sprite.getGlobalBounds().top) || !IntRect(2 * 89, 2 * 89, 89 * 16, 89 * 16).contains(sprite.getGlobalBounds().left + sprite.getGlobalBounds().width, sprite.getGlobalBounds().height + sprite.getGlobalBounds().top))
+	if (!sf::IntRect(2 * 89, 2 * 89, 89 * 16, 89 * 16).contains(sprite.getGlobalBounds().left, sprite.getGlobalBounds().top) || !sf::IntRect(2 * 89, 2 * 89, 89 * 16, 89 * 16).contains(sprite.getGlobalBounds().left + sprite.getGlobalBounds().width, sprite.getGlobalBounds().height + sprite.getGlobalBounds().top))
 	{
 		y = y < 2 * 89 ? 2 * 89 : y;
 		x = x < 2 * 89 ? 2 * 89 : x;
