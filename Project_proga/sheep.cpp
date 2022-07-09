@@ -1,7 +1,7 @@
 #include "sheep.h"
 using namespace sf;
 
-Sheep::Sheep():Creature(0,0,0,0), dir(0)
+Sheep::Sheep():Creature(0, 0, 0, 0), dir(0)
 {}
 
 Sheep::Sheep(std::string F, float _x, float _y, float W, float H) :Creature(_x, _y, W, H), Download(F), dir(rand() % 4 + 1)
@@ -17,10 +17,8 @@ void Sheep::update(float time)
 		currentFrame += 0.007 * time; 
 		speed = 0.2;
 		if (currentFrame > 3)
-		{
 			currentFrame -= 3;
-		}
-		sprite.setTextureRect(sf::IntRect(3*(int)currentFrame, 10, 35, 30));
+		sprite.setTextureRect(sf::IntRect(3* static_cast<int>(currentFrame), 10, 35, 30));
 	}
 	else if (dir == 2)
 	{
@@ -28,7 +26,7 @@ void Sheep::update(float time)
 		speed = 0.2;
 		if (currentFrame > 3)
 			currentFrame -= 3;
-		sprite.setTextureRect(sf::IntRect(3 * (int)currentFrame, 55, 35, 32));
+		sprite.setTextureRect(sf::IntRect(3 * static_cast<int>(currentFrame), 55, 35, 32));
 	}
 	else if (dir == 3)
 	{
@@ -36,7 +34,7 @@ void Sheep::update(float time)
 		speed = 0.2;
 		if (currentFrame > 3)
 			currentFrame -= 3;
-		sprite.setTextureRect(sf::IntRect(3* (int)currentFrame, 95, 35, 25));
+		sprite.setTextureRect(sf::IntRect(3* static_cast<int>(currentFrame), 95, 35, 25));
 	}
 	else if (dir == 4)
 	{
@@ -44,7 +42,7 @@ void Sheep::update(float time)
 		speed = 0.2;
 		if (currentFrame > 3)
 			currentFrame -= 3;
-		sprite.setTextureRect(sf::IntRect(3 * (int)currentFrame, 128, 30, 37));
+		sprite.setTextureRect(sf::IntRect(3 * static_cast<int>(currentFrame), 128, 30, 37));
 	}
 }
 
